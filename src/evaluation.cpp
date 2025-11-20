@@ -1041,7 +1041,7 @@ Value Begin::eval(Assoc &e) {
     Assoc new_env = e;
     for (const auto& def : internal_defs) {
         // 使用 VoidV() 作为占位符，表示"已定义但未初始化"
-        new_env = extend(def.first, VoidV(), new_env);
+        new_env = extend(def.first, Value(nullptr), new_env);
     }
         //在新环境中求值所有定义的表达式，此时所有变量名都在环境中，支持相互引用
     for (const auto& def : internal_defs) {
@@ -1054,14 +1054,20 @@ Value Begin::eval(Assoc &e) {
     if (first_non_define >= es.size()) {
         return VoidV();
     }
+    //
+    // Value result = es[first_non_define]->eval(new_env);//第一个
+    // //剩下的
+    // for (size_t i = first_non_define + 1; i < es.size(); i++) {
+    //     Value temp = es[i]->eval(new_env);
+    //     result = temp;
+    // }
+    // return result;
 
-    Value result = es[first_non_define]->eval(new_env);//第一个
-    //剩下的
-    for (size_t i = first_non_define + 1; i < es.size(); i++) {
-        Value temp = es[i]->eval(new_env);
-        result = temp;
+
+    for (int i = first_non_define; i < es.size() - 1; i++) {
+        es[i]->eval(new_env);
     }
-    return result;
+    return es[es.size() - 1]->eval(new_env);
 
 
 
@@ -1429,7 +1435,7 @@ Value Cond::eval(Assoc &env) {
 
         if (clause[0]->e_type == E_VAR) {
             auto var_expr = dynamic_cast<Var*>(clause[0].get());
-            if (var_expr!=nullptr && var_expr->x == "else") {
+            if (var_expr && var_expr->x == "else") {
                 if (clause.size() == 1) {
                     return VoidV();
                 }
@@ -1444,7 +1450,7 @@ Value Cond::eval(Assoc &env) {
         }
         else {
             Value condition_value = clause[0]->eval(env);
-            bool check;
+            bool check = true;
             //只有#f是假
             if (condition_value->v_type == V_BOOL) {
                 auto bool_val = dynamic_cast<Boolean*>(condition_value.get());
@@ -1481,12 +1487,9 @@ Value Lambda::eval(Assoc &env) {
 }
 
 Value Apply::eval(Assoc &e) {
-    std::cout << "=== Apply::eval ===" << std::endl;
     Value proc_value = rator->eval(e);
-    std::cout << "Function type: " << proc_value->v_type << std::endl;
 
      if (proc_value->v_type != V_PROC) {//不是函数类型
-         std::cout << "ERROR: Attempt to apply non-procedure, type = " << proc_value->v_type << std::endl;
          throw RuntimeError("Attempt to apply a non-procedure");
      }
 
@@ -1544,6 +1547,8 @@ Value Define::eval(Assoc &env) {
 //     }
 //     return body->eval(new_env);
 // }
+
+//!!!
 Value Let::eval(Assoc &env) {
 
     // 求值所有绑定
@@ -1613,6 +1618,9 @@ Value Let::eval(Assoc &env) {
 //     }
 //     return body->eval(new_env);
 // }
+
+
+//!!!
 Value Letrec::eval(Assoc &env) {
     // 第一步：创建包含占位符的环境
     Assoc env1 = env;
