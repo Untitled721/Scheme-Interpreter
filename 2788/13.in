@@ -1,0 +1,22 @@
++
+-
+*
+<
+<=
+=
+>=
+>
+void
+exit
+cons
+car
+cdr
+not
+number?
+boolean?
+pair?
+symbol?
+procedure?
+eq?
+((if #t + -) 1 2)
+(exit)

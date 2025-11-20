@@ -1,0 +1,280 @@
+{
+    "Groups":[
+        {
+            "GroupID": 1,
+            "GroupName": "number basic test",
+            "GroupScore": 10,
+            "TestPoints": [
+                1,2
+            ]
+        },
+        {
+            "GroupID": 2,
+            "GroupName": "number extension test",
+            "GroupScore": 15,
+            "TestPoints": [
+                3,4
+            ]
+        },
+        {
+            "GroupID": 3,
+            "GroupName": "quote and cons test",
+            "GroupScore": 10,
+            "TestPoints":[
+                5,6
+            ]
+        },
+        {
+            "GroupID": 4,
+            "GroupName": "list test",
+            "GroupScore": 5,
+            "TestPoints":[
+                7
+            ]
+        },
+        {
+            "GroupID": 5,
+            "GroupName": "set-car and set-cdr test",
+            "GroupScore": 5,
+            "TestPoints":[
+                8
+            ]
+        },
+        {
+            "GroupID": 6,
+            "GroupName": "begin test",
+            "GroupScore": 5,
+            "TestPoints":[
+                9
+            ]
+        },
+        {
+            "GroupID": 7,
+            "GroupName": "boolean and if test",
+            "GroupScore": 10,
+            "TestPoints":[
+                10,11
+            ]
+        },
+        {
+            "GroupID": 8,
+            "GroupName": "cond test",
+            "GroupScore": 5,
+            "TestPoints":[
+                12
+            ]
+        },
+        {
+            "GroupID": 9,
+            "GroupName": "var and function basic test",
+            "GroupScore": 10,
+            "TestPoints":[
+                13,14
+            ]
+        },
+        {
+            "GroupID": 10,
+            "GroupName": "define var test",
+            "GroupScore": 5,
+            "TestPoints":[
+                15
+            ]
+        },
+        {
+            "GroupID": 11,
+            "GroupName": "define function test",
+            "GroupScore": 5,
+            "TestPoints":[
+                16
+            ]
+        },
+        {
+            "GroupID": 12,
+            "GroupName": "define extension test",
+            "GroupScore": 10,
+            "TestPoints":[
+                17
+            ]
+        },
+        {
+            "GroupID": 13,
+            "GroupName": "let and letrec test",
+            "GroupScore": 20,
+            "TestPoints":[
+                18,19
+            ]
+        },
+        {
+            "GroupID": 14,
+            "GroupName": "assignment function test",
+            "GroupScore": 10,
+            "TestPoints":[
+                20
+            ]
+        }
+    ],
+    "Details": [
+        {
+            "ID": 1,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 2,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 3,
+            "Dependency": 1,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 4,
+            "Dependency": 2,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 5,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 6,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 7,
+            "Dependency": 16,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 8,
+            "Dependency": 16,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 9,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 10,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 11,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 12,
+            "Dependency": 16,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 13,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 14,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 15,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 16,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 17,
+            "Dependency": 16,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 18,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 19,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        },
+        {
+            "ID": 20,
+            "Dependency": 0,
+            "TimeLimit": 1500,
+            "MemoryLimit": 256000000,
+            "DiskLimit": 0,
+            "ValgrindTestOn": false
+        }
+    ],
+    "CompileTimeLimit": 100000,
+    "SPJ": 0
+}
