@@ -1361,7 +1361,6 @@ Value syntaxToValue(const Syntax &syntax) {
 }
 //#######
 Value Quote::eval(Assoc& e) {
-    //TODO: To complete the quote logic
     return syntaxToValue(s);
 }
 
