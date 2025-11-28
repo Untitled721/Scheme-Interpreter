@@ -1,6 +1,4 @@
-# Project 3: Scheme Interpreter
 
-> SJTU CS1958-01 2025Fall 第三次大作业
 
 请先阅读 [解释器简明教程](https://notes.sjtu.edu.cn/s/mAgan6OSB)，有兴趣可以阅读 [为什么 Lisp 语言如此先进？](https://www.ruanyifeng.com/blog/2010/10/why_lisp_is_superior.html):)
 
@@ -830,17 +828,3 @@ tree
 对于 `Code Review` 部分，占 `10 pts`.
 
 本项目的得分上限是 125 `pts`.
-
-## Acknowledgement
-
-特别感谢 `CS61A` 对这个项目的启发.
-
-感谢 2025 级黄捷航、王齐一为本项目作出了巨大的贡献，巨大的牺牲，巨大的 carry 无敌了，无敌了。
-
-感谢 2025 级彭徐阳为这个项目中的众多勘误提出了宝贵的修改意见。
-
-感谢 2024 级宋张驰、李徐砚、刘宇轩、王瑞涵为本项目审核与评价。
-
-感谢这个大作业的前辈：2021 级陆潇扬学长、2022 级赵天朗学长与 2023 级王许诺学长！
-
-如有问题请联系本项目的发布者 `PhantomPhoenix`, 他的邮箱地址是: `logic_1729@sjtu.edu.cn`
